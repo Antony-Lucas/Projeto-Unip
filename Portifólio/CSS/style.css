@@ -424,6 +424,91 @@ html{
     text-align: center;
 }
 
+.parallax{
+    position: relative;
+    background-image: url("../img/maxresdefault.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100vh;
+    width: 100%;
+}
+
+.content{
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    transform: translate(5%, 50%);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+}
+
+.content div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: left;
+}
+
+.content h1{
+    position: absolute;
+    top: 0.5em;
+    margin-bottom: 50px;
+    padding: 10px 50px;
+    font-family:'Segoe UI', sans-serif;
+    font-weight: normal;
+    font-size: 2em;
+    color: #000;
+    background-color: #fff;
+}
+
+.content div img{
+    max-width: 12%;
+    clip-path: circle();
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.content div div{
+    margin: 10px 70px;
+    display: flex;
+    flex-direction: column;
+}
+
+#about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#about div{
+    font-family:'Segoe UI', sans-serif;
+    color: #fff;
+}
+
+#about div p{
+    font-size: 1.1em;
+}
+
+.data{
+    margin-top: 25px;
+}
+
+footer{
+    background-color: #333;
+    padding: 80px;
+}
+
+footer div{
+    display: flex;
+    justify-content: space-around;    
+}
+
+
 @media only screen and (max-width: 1440px){
     .bigpicture{
         padding: 5em;
@@ -529,6 +614,19 @@ html{
     
 }
 
+@media only screen and (max-width: 1026px){
+    .content{
+        transform: translate(7%, 50%);
+    }
+    .content h1{
+        top: -2em;
+    }
+
+    footer div a  svg{
+        max-width: 80%;
+    }
+}
+
 @media only screen and (max-width: 500px){
     .bigpicture{
         padding: 4em;
@@ -564,5 +662,99 @@ html{
     .scrolldown{
         left: 48%;
         bottom: 7vh;
+    }
+
+    .projects{
+        min-height: 20vh;
+        width: 100%;
+        overflow: hidden;
+        padding: 0.5rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .image{
+        width: 500px;
+        margin: 5px 15px;
+        box-shadow: 0 0 25px 1px rgba(0, 0, 0, 0.3);
+    }
+    
+    .image:hover img{
+        transform: translate(-50%, -50%)  rotate(0deg);
+    }
+    
+    .icons div{
+        margin:30px;
+        font-family: "Cinzel";
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .icons div img{
+        max-width: 30px;
+        margin: 10px;
+    }
+    
+    .icons div p{
+        font-size: 0.8em;
+        text-align: center;
+    }
+    
+    .content div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+    .content h1{
+        position: absolute;
+        top: -6em;
+        margin-bottom: 50px;
+        padding: 10px 50px;
+        font-family:'Segoe UI', sans-serif;
+        font-weight: normal;
+        font-size: 1.3em;
+        color: #fff;
+        background-color: transparent;
+    }
+    
+    .content div img{
+        max-width:20%;
+        clip-path: circle();
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .content div div{
+        margin: 10px 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #about{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #about div{
+        font-family:'Segoe UI', sans-serif;
+        color: #fff;
+        margin-top: 50px;
+    }
+    
+    #about div p{
+        font-size: 1em;
+    }
+    
+    .data{
+        margin-top: 25px;
     }
 }
