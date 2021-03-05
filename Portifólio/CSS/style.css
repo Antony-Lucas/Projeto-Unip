@@ -90,11 +90,6 @@ html{
     outline: none;
 }
 
-.scene div ul{
-    display: flex;
-}
-
-
 .navbar{
     padding: 25px;
     display: flex;
@@ -164,9 +159,14 @@ html{
     }
 }
 
-.navbar div ul li{
+.links ul{
+    display: flex;
+}
+
+.links ul li{
     list-style-type: none;
     margin: 15px 10px 0 10px;
+    display: inline-block;
 }
 
 .links ul li a{
@@ -254,6 +254,52 @@ html{
     transition: transform 0.25s;
 }
 
+.menu-toggle{
+    float: right;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    display: none;
+}
+
+@media only screen and (max-width: 991px){
+    .id{
+        position: absolute;
+        left: 0;
+    }
+
+    .menu-toggle{
+        display: block;
+        left: 90%;
+    }
+
+    .links{
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 50px);
+        background: #000;
+        top: 100px;
+        left: -100%;
+        transition: 0.5s;
+    }
+
+    .links.active{
+        left: 0;
+    }
+
+    .links ul{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .links ul li a{
+        width: 100%;
+        height: 90px;
+        text-align: center;
+    }
+
+}
+
 .bigpicture{
     padding: 7em;
     text-align: center;
@@ -276,8 +322,7 @@ html{
 
 .bigpicture h1:nth-child(2){
     font-weight: lighter;
-    position: relative;
-    top: -20px;
+    margin-bottom: 20px;
 }
 
 .scrolldown{
@@ -461,8 +506,7 @@ html{
     font-family:'Segoe UI', sans-serif;
     font-weight: normal;
     font-size: 2em;
-    color: #000;
-    background-color: #fff;
+    color: #fff;
 }
 
 .content div img{
@@ -611,6 +655,18 @@ footer div{
         left: 49.3%;
         bottom: 7vh;
     }
+
+    .content h1{
+        position: absolute;
+        top: -2em;
+        margin-bottom: 50px;
+        padding: 10px 50px;
+        font-family:'Segoe UI', sans-serif;
+        font-weight: normal;
+        font-size: 1.3em;
+        color: #fff;
+        background-color: transparent;
+    }
     
 }
 
@@ -628,13 +684,18 @@ footer div{
 }
 
 @media only screen and (max-width: 500px){
+    .scene .rocket{
+        left: 47%;
+        bottom: 27%;
+    }
+
     .bigpicture{
-        padding: 4em;
+        padding: 8em;
         text-align: center;
     }
     
     .bigpicture h1{
-        margin: 10px;
+        margin: 20px;
         font-size: 2em;
     }
 
@@ -660,7 +721,7 @@ footer div{
     }
 
     .scrolldown{
-        left: 48%;
+        left: 45%;
         bottom: 7vh;
     }
 
